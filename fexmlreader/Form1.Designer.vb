@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.lblArchivo = New System.Windows.Forms.Label()
@@ -48,6 +48,9 @@ Partial Class Form1
         Me.btnImprimir = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtExento = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtImpAdic = New System.Windows.Forms.TextBox()
+        Me.txtMntAdic = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -108,7 +111,7 @@ Partial Class Form1
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 274)
+        Me.Label7.Location = New System.Drawing.Point(419, 270)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(57, 13)
         Me.Label7.TabIndex = 10
@@ -117,7 +120,7 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(163, 273)
+        Me.Label8.Location = New System.Drawing.Point(447, 322)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(24, 13)
         Me.Label8.TabIndex = 11
@@ -126,9 +129,10 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(444, 273)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(435, 376)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(31, 13)
+        Me.Label9.Size = New System.Drawing.Size(36, 13)
         Me.Label9.TabIndex = 12
         Me.Label9.Text = "Total"
         '
@@ -138,9 +142,13 @@ Partial Class Form1
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToOrderColumns = True
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.Location = New System.Drawing.Point(12, 113)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(556, 141)
         Me.DataGridView1.TabIndex = 13
         '
@@ -209,26 +217,29 @@ Partial Class Form1
         'txtNeto
         '
         Me.txtNeto.Enabled = False
-        Me.txtNeto.Location = New System.Drawing.Point(70, 270)
+        Me.txtNeto.Location = New System.Drawing.Point(477, 266)
         Me.txtNeto.Name = "txtNeto"
         Me.txtNeto.Size = New System.Drawing.Size(87, 20)
         Me.txtNeto.TabIndex = 23
+        Me.txtNeto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtIva
         '
         Me.txtIva.Enabled = False
-        Me.txtIva.Location = New System.Drawing.Point(184, 271)
+        Me.txtIva.Location = New System.Drawing.Point(477, 319)
         Me.txtIva.Name = "txtIva"
         Me.txtIva.Size = New System.Drawing.Size(87, 20)
         Me.txtIva.TabIndex = 24
+        Me.txtIva.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtTotal
         '
         Me.txtTotal.Enabled = False
-        Me.txtTotal.Location = New System.Drawing.Point(481, 271)
+        Me.txtTotal.Location = New System.Drawing.Point(477, 373)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(87, 20)
         Me.txtTotal.TabIndex = 25
+        Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btnImprimir
         '
@@ -242,7 +253,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(277, 274)
+        Me.Label1.Location = New System.Drawing.Point(408, 297)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 13)
         Me.Label1.TabIndex = 27
@@ -251,17 +262,47 @@ Partial Class Form1
         'txtExento
         '
         Me.txtExento.Enabled = False
-        Me.txtExento.Location = New System.Drawing.Point(346, 271)
+        Me.txtExento.Location = New System.Drawing.Point(477, 294)
         Me.txtExento.Name = "txtExento"
         Me.txtExento.Size = New System.Drawing.Size(87, 20)
         Me.txtExento.TabIndex = 28
+        Me.txtExento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(112, 347)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(95, 13)
+        Me.Label11.TabIndex = 29
+        Me.Label11.Text = "Impuesto adicional"
+        '
+        'txtImpAdic
+        '
+        Me.txtImpAdic.Enabled = False
+        Me.txtImpAdic.Location = New System.Drawing.Point(213, 344)
+        Me.txtImpAdic.Name = "txtImpAdic"
+        Me.txtImpAdic.Size = New System.Drawing.Size(258, 20)
+        Me.txtImpAdic.TabIndex = 30
+        '
+        'txtMntAdic
+        '
+        Me.txtMntAdic.Enabled = False
+        Me.txtMntAdic.Location = New System.Drawing.Point(477, 344)
+        Me.txtMntAdic.Name = "txtMntAdic"
+        Me.txtMntAdic.Size = New System.Drawing.Size(87, 20)
+        Me.txtMntAdic.TabIndex = 31
+        Me.txtMntAdic.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(580, 313)
+        Me.ClientSize = New System.Drawing.Size(580, 405)
+        Me.Controls.Add(Me.txtMntAdic)
+        Me.Controls.Add(Me.txtImpAdic)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.txtExento)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnImprimir)
@@ -307,7 +348,6 @@ Partial Class Form1
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents FacturaDataSet As System.Data.DataSet
     Friend WithEvents LeerXMLButton As System.Windows.Forms.Button
     Friend WithEvents Label10 As Label
     Friend WithEvents txtFolio As TextBox
@@ -321,4 +361,8 @@ Partial Class Form1
     Friend WithEvents btnImprimir As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents txtExento As TextBox
+    Public WithEvents FacturaDataSet As DataSet
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtImpAdic As TextBox
+    Friend WithEvents txtMntAdic As TextBox
 End Class
